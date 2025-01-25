@@ -39,6 +39,14 @@ header > p{
   margin-block: 30px;
 }
 
+.Game_States_Section.won{
+  background-color: #10A95B;
+}
+
+.Game_States_Section.lost{
+  background-color: #BA2A2A;
+}
+
 .Game_States_Section > h2{
   font-size: 1.25rem;
   margin: 5px;
@@ -60,6 +68,21 @@ header > p{
 .chip{
   border-radius: 3px;
   padding: 4.5px;
+  position: relative;
+}
+
+.chip.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .word{
@@ -97,6 +120,14 @@ header > p{
   cursor: pointer;
 }
 
+.keyboard > button.correct{
+  background-color: #10A958;
+}
+
+.keyboard > button.wrong{
+  background-color: #EC5D49;
+}
+
 .new_game_btn{
   background-color: #b2dbf8;
   display: flex;
@@ -107,4 +138,6 @@ header > p{
   margin-block: 30px;
   height: 50px;
   cursor: pointer;
+  width: 100%;
+  justify-content: center;
 }
